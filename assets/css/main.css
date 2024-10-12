@@ -12,26 +12,29 @@
 .flyer-container {
   position: relative;
   max-width: 1440px;
-  height: 1799px;
   margin: 0 auto;
 }
 
+.flyers-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
 .flyer-img {
+  width: 100%;
+  height: auto;
+  max-height: 1799px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.flyer-nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.flyer-1 {
-  opacity: 1;
-}
-
-.flyer-2 {
-  opacity: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
 }
 
 .nav-button {
@@ -43,7 +46,7 @@
   padding: 16px;
   font-size: 18px;
   cursor: pointer;
-  z-index: 10;
+  pointer-events: auto;
 }
 
 .prev {
@@ -54,16 +57,21 @@
   right: 10px;
 }
 
-.flyer-toggle {
+input[type="radio"] {
   display: none;
 }
 
-.flyer-toggle:checked ~ .flyer-1 {
-  opacity: 0;
+#flyer1:checked ~ .flyers-wrapper {
+  transform: translateX(0);
 }
 
-.flyer-toggle:checked ~ .flyer-2 {
-  opacity: 1;
+#flyer2:checked ~ .flyers-wrapper {
+  transform: translateX(-100%);
+}
+
+#flyer1:checked ~ .flyer-nav .prev,
+#flyer2:checked ~ .flyer-nav .next {
+  display: none;
 }
 
 

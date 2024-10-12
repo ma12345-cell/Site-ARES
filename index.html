@@ -184,17 +184,21 @@
 
 
 		  
-<!-- Flyers Section -->
 <section id="flyers" class="flyers section">
   <div class="container">
     <div class="flyer-container">
-      <input type="checkbox" id="flyer-toggle" class="flyer-toggle">
+      <input type="radio" name="flyer" id="flyer1" checked>
+      <input type="radio" name="flyer" id="flyer2">
       
-      <img src="assets/img/1.jpg" alt="Flyer 1" class="flyer-img flyer-1">
-      <img src="assets/img/2.jpg" alt="Flyer 2" class="flyer-img flyer-2">
+      <div class="flyers-wrapper">
+        <img src="assets/img/1.jpg" alt="Flyer 1" class="flyer-img">
+        <img src="assets/img/2.jpg" alt="Flyer 2" class="flyer-img">
+      </div>
       
-      <label for="flyer-toggle" class="nav-button prev">&#10094;</label>
-      <label for="flyer-toggle" class="nav-button next">&#10095;</label>
+      <div class="flyer-nav">
+        <label for="flyer1" class="nav-button prev">&#10094;</label>
+        <label for="flyer2" class="nav-button next">&#10095;</label>
+      </div>
     </div>
   </div>
 </section>
