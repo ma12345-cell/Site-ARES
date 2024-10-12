@@ -4,6 +4,73 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+.flyers {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.flyer-container {
+  position: relative;
+  max-width: 1440px;
+  height: 1799px;
+  margin: 0 auto;
+}
+
+.flyer-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.flyer-1 {
+  opacity: 1;
+}
+
+.flyer-2 {
+  opacity: 0;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 16px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.flyer-toggle {
+  display: none;
+}
+
+.flyer-toggle:checked ~ .flyer-1 {
+  opacity: 0;
+}
+
+.flyer-toggle:checked ~ .flyer-2 {
+  opacity: 1;
+}
+
+
+
+
+
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
